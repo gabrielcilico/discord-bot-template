@@ -4,7 +4,8 @@
   "description": "A template for discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gabrielcilico/discord-bot-template/issues"
   },
-  "homepage": "https://github.com/gabrielcilico/discord-bot-template#readme"
+  "homepage": "https://github.com/gabrielcilico/discord-bot-template#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
 }

@@ -61,6 +61,16 @@ npm install
 
 ---
 
+### ✔️ Run Local
+
+⚠️ Edit [config.js](#🕸️-configuration) first!
+
+```
+yarn start
+```
+
+---
+
 ### 📚 Reference documentation
 
 - [DiscordJS](https://discordjs.guide/)
