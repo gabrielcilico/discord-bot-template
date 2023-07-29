@@ -1,0 +1,19 @@
+{
+  "name": "discord-bot-template",
+  "version": "1.0.0",
+  "description": "A template for discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gabrielcilico/discord-bot-template.git"
+  },
+  "author": "cilico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielcilico/discord-bot-template/issues"
+  },
+  "homepage": "https://github.com/gabrielcilico/discord-bot-template#readme"
+}
