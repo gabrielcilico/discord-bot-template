@@ -1,7 +1,7 @@
 const { readdirSync } = require("fs");
 const { Collection } = require("discord.js");
 
-client.commands = new Collection();
+global.client.commands = new Collection();
 CommandsArray = [];
 
 console.log(`Loading commands...`);
@@ -17,24 +17,16 @@ readdirSync("./commands/").forEach((dirs) => {
     if (command.name && command.description) {
       CommandsArray.push(command);
       console.log(`=> Command [${command.name.toLowerCase()}] loaded.`);
-      client.commands.set(command.name.toLowerCase(), command);
+      global.client.commands.set(command.name.toLowerCase(), command);
       delete require.cache[require.resolve(`../commands/${dirs}/${file}`)];
-      console.log(
-        `All commands loaded in ${new Date().getTime() - startDate} seconds...`
-      );
-      return;
     }
-    console.log(`=> Command [${command.name.toLowerCase()}] failed.`);
+    console.log(
+      `All commands loaded in ${new Date().getTime() - startDate} seconds...`
+    );
   }
 });
 
 client.on("ready", (client) => {
-  if (client.config.app.global) {
-    client.application.commands.set(CommandsArray);
-    return;
-  } else {
-    client.guilds.cache
-      .get(client.config.app.guild)
-      .commands.set(CommandsArray);
-  }
+  client.application.commands.set(CommandsArray);
+  console.log(`=> ${client.user.username} is running...`);
 });

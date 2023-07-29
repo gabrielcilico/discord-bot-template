@@ -2,10 +2,11 @@ module.exports = {
   name: "Template BOT",
 
   app: {
-    token: "XXX",
+    token:
+      "MTEzNDY2MTE4OTc5NjkwNDk3MA.G3iu5y.vF3AhsauxmRY_6D2FilvAPzWa4ggoNZ9gH-sug",
     credits: "Made with ❤️ by cilico",
     global: true,
-    client: "",
+    client: "1134661189796904970",
     guild: "700761715041632369",
   },
 

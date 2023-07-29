@@ -1,18 +1,10 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 
 global.client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildVoiceStates,
-    GatewayIntentBits.MessageContent,
-  ],
-  disableMentions: "everyone",
+  intents: [GatewayIntentBits.Guilds],
 });
-
-client.config = require("./config");
+global.client.config = require("./config");
 
 require("./src/loader");
 
-client.login(client.config.app.token);
+global.client.login(global.client.config.app.token);

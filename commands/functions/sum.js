@@ -1,15 +1,18 @@
+const { ApplicationCommandOptionType } = require("discord.js");
+
 module.exports = {
   name: "sum",
   description: "Sum two numbers.",
+  showHelp: true,
   options: [
     {
-      name: "firstNumber",
+      name: "firstnumber",
       description: "the first number of the sum",
       type: ApplicationCommandOptionType.String,
       required: true,
     },
     {
-      name: "secondNumber",
+      name: "secondnumber",
       description: "the second number of the sum",
       type: ApplicationCommandOptionType.String,
       required: true,
@@ -17,8 +20,8 @@ module.exports = {
   ],
 
   execute({ inter }) {
-    const firstNumber = parseInt(inter.options.getString("firstNumber"));
-    const secondNumber = parseInt(inter.options.getString("secondNumber"));
+    const firstNumber = parseInt(inter.options.getString("firstnumber"));
+    const secondNumber = parseInt(inter.options.getString("secondnumber"));
     inter.reply(
       `${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`
     );
