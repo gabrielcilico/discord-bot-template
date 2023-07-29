@@ -1,7 +1,9 @@
 module.exports = {
+  name: "Template BOT",
+
   app: {
     token: "XXX",
-    credits: "Made with ❤️ by cilico.dev",
+    credits: "Made with ❤️ by cilico",
     global: true,
     client: "",
     guild: "700761715041632369",
