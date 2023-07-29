@@ -14,10 +14,10 @@ module.exports = {
         name: client.user.username,
         iconURL: client.user.displayAvatarURL({ size: 1024, dynamic: true }),
       })
-      .setDescription("Here we go! This is all the commands I have.")
+      .setDescription("🥳 You can add more commands.")
       .addFields([
         {
-          name: `I have ${commands.size} commands available.`,
+          name: `😎 I have ${commands.size} commands available.`,
           value: commands
             .map((command) => `- **${command.name}**: ${command.description} `)
             .join("\n"),
@@ -25,10 +25,11 @@ module.exports = {
       ])
       .setTimestamp()
       .setFooter({
-        text: client.config.credits,
+        text:
+          client.config.app.credits ?? `Requested by ${inter.user.username}`,
         iconURL: inter.member.avatarURL({ dynamic: true }),
       });
 
-    inter.reply({ embeds: [embed] });
+    inter.reply({ embeds: [embed], ephemeral: true });
   },
 };
